@@ -1,6 +1,6 @@
 # Store Information
 # Metadata that describes the store.
-# https://developer.bigcommerce.com/api/stores/v2/store_information
+# https://developer.bigcommerce.com/api-reference/store-management/store-information-api/store_information.v2.json
 
 module Bigcommerce
   class StoreInfo < Resource
@@ -33,6 +33,8 @@ module Bigcommerce
     property :active_comparison_modules
     property :dimension_thousands_token
     property :is_price_entered_with_tax
+    property :first_name
+    property :last_name
 
     def self.info(params = {})
       get path.build, params
